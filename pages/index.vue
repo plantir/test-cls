@@ -2,11 +2,11 @@
 <template>
   <main>
     <div>
-      <SectionIntro
+      <!-- <SectionIntro
         :doctors="doctors"
         :loading="loadingDoctors"
         :pageInfo="pageInfo"
-      />
+      /> -->
     </div>
     <!-- <SectionSearch />
     <div v-if="loggedIn">
