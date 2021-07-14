@@ -8,7 +8,7 @@
         :pageInfo="pageInfo"
       />
     </div>
-    <SectionSearch />
+    <!-- <SectionSearch />
     <div v-if="loggedIn">
       <ChosenDoctor
         title="مشاوره کرونا"
@@ -26,7 +26,7 @@
       <SectionTestimonial :items="testimonials" :loading="testimonialLoading" />
     </div>
     <SectionWeblog :posts="posts" v-if="posts.length" />
-    <SedctionSocial />
+    <SedctionSocial /> -->
   </main>
 </template>
 <script lang="ts">
