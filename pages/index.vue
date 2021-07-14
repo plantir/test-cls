@@ -1,6 +1,6 @@
 <style lang="scss" scoped></style>
 <template>
-  <main>
+  <section>
     <div>
       <!-- <SectionIntro
         :doctors="doctors"
@@ -27,7 +27,7 @@
     </div>
     <SectionWeblog :posts="posts" v-if="posts.length" />
     <SedctionSocial /> -->
-  </main>
+  </section>
 </template>
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
@@ -56,7 +56,6 @@ Component.registerHooks(['fetch', 'head'])
     DiseasesList,
   },
 })
-
 export default class HomePage extends Vue {
   doctors: Doctor[] | undefined = []
   suggestionDoctors: Doctor[] = []
