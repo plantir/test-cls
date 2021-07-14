@@ -1,6 +1,6 @@
 <template>
   <v-app :dark="false">
-    <MenuMobile v-model="drawer" v-if="$device.isMobileOrTablet" />
+    <!-- <MenuMobile v-model="drawer" v-if="$device.isMobileOrTablet" /> -->
     <!-- <HeaderMobile
       @toggleNavbar="drawer = !drawer"
       v-if="$device.isMobileOrTablet"
