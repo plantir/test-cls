@@ -112,7 +112,7 @@ footer {
 </style>
 <template>
   <footer>
-    <v-container>
+    <!-- <v-container>
       <v-row>
         <v-col cols="12" md="4" lg="4" xl="4">
           <div class="box about">
@@ -212,7 +212,7 @@ footer {
           </v-row>
         </v-col>
       </v-row>
-    </v-container>
+    </v-container> -->
     <div class="copy-right d-flex justify-center align-center">
       <div class="icon-footer">
         <div>
