@@ -56,6 +56,7 @@ Component.registerHooks(['fetch', 'head'])
     DiseasesList,
   },
 })
+
 export default class HomePage extends Vue {
   doctors: Doctor[] | undefined = []
   suggestionDoctors: Doctor[] = []

@@ -64,7 +64,12 @@ export default {
       'vrwebdesign-nuxt/assets/style/tools/_responsive.scss'
     ]
   },
-  plugins: ['@/plugins/vue-awesome-swiper.js','@/plugins/globalComponents.js'],
+  plugins: [
+    { src: './plugins/vue-awesome-swiper.js' },
+    { src: './plugins/globalComponents.js' },
+    { src: './plugins/axios.js' },
+    { src: './plugins/sanitize.js' }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
