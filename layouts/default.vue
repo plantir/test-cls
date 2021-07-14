@@ -1,15 +1,15 @@
 <template>
   <v-app :dark="false">
     <MenuMobile v-model="drawer" v-if="$device.isMobileOrTablet" />
-    <HeaderMobile
+    <!-- <HeaderMobile
       @toggleNavbar="drawer = !drawer"
       v-if="$device.isMobileOrTablet"
     />
-    <HeaderDesktop v-else />
+    <HeaderDesktop v-else /> -->
     <v-content id="content">
       <nuxt />
     </v-content>
-    <!-- <FooterDesktop /> -->
+    <FooterDesktop />
   </v-app>
 </template>
 <script lang="ts">
