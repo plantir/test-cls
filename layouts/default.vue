@@ -9,7 +9,7 @@
     <v-content id="content">
       <nuxt />
     </v-content>
-    <FooterDesktop />
+    <!-- <FooterDesktop /> -->
   </v-app>
 </template>
 <script lang="ts">
