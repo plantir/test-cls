@@ -1,14 +1,14 @@
 <style lang="scss" scoped></style>
 <template>
-  <section>
+  <main>
     <div>
-      <!-- <SectionIntro
+      <SectionIntro
         :doctors="doctors"
         :loading="loadingDoctors"
         :pageInfo="pageInfo"
-      /> -->
+      />
     </div>
-    <!-- <SectionSearch />
+    <SectionSearch />
     <div v-if="loggedIn">
       <ChosenDoctor
         title="مشاوره کرونا"
@@ -26,8 +26,8 @@
       <SectionTestimonial :items="testimonials" :loading="testimonialLoading" />
     </div>
     <SectionWeblog :posts="posts" v-if="posts.length" />
-    <SedctionSocial /> -->
-  </section>
+    <SedctionSocial />
+  </main>
 </template>
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
