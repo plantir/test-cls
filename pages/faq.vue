@@ -127,7 +127,7 @@
   </v-container>
 </template>
 <script lang="ts">
-import { Vue, Component, Prop, Watch, Emit, Ref } from 'vue-property-decorator'
+import { Vue, Component, Prop, Watch, Emit, Ref } from 'nuxt-property-decorator'
 
 @Component
 export default class FaqPage extends Vue {

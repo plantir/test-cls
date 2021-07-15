@@ -30,15 +30,28 @@ export default {
    ** Headers of the page
    */
   head: {
-    titleTemplate: '%s - ' + process.env.npm_package_name,
-    title: process.env.npm_package_name || '',
+    htmlAttrs: {
+      lang: 'fa'
+    },
+    title: 'رسا سامانه سلامت ایرانیان',
     meta: [
       { charset: 'utf-8' },
+      ...(process.env.NO_INDEX == 'true'
+        ? [
+            {
+              hid: 'robots',
+              name: 'robots',
+              property: 'robots',
+              content: 'noindex,nofollow'
+            }
+          ]
+        : []),
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content:
+          'با استفاده از رسا تماس های غیر ضروری خود از سمت بیماران را حذف کنید و مکالمات غیر مربوط به روند درمانی را کاهش رایگان ثبت‌نام کنید و با دسترسی به پزشکان معرفی‌شده در وب‌سایت رسا، تماس مستقیم با بهترین پزشکان متخصص را با صرفه‌جویی در وقت و هزینه خود، تجربه کنید'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
@@ -53,7 +66,8 @@ export default {
   css: [
     'vrwebdesign-nuxt/assets/style/main.scss',
     '~/assets/styles/main.scss',
-    'animate.css/animate.css'
+    'vrwebdesign-nuxt/assets/style/fonts/_iransans.scss',
+    'vrwebdesign-nuxt/assets/style/fonts/_lineawesome.scss'
   ],
   /*
    ** Plugins to load before mounting the App
@@ -176,6 +190,12 @@ export default {
       }
     }
   },
+  serverMiddleware: [
+    '~/servermiddleware/underconstruction.js',
+    '~/servermiddleware/redirect.js',
+    '~/servermiddleware/category_redirect.js',
+    '~/servermiddleware/doctors.js'
+  ],
   /*
    ** vuetify module configuration
    ** https://github.com/nuxt-community/vuetify-module

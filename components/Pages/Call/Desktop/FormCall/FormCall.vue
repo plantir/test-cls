@@ -1,0 +1,88 @@
+<style lang="scss" scoped>
+.form-call {
+  font-weight: 500;
+  font-size: 16px;
+  .main-title {
+    border-bottom: 2px solid #e6e6e6;
+    font-weight: bold;
+    position: relative;
+    line-height: 40px;
+    &::before {
+      background-color: #f9a429;
+      content: '';
+      position: absolute;
+      right: 0;
+      bottom: -2px;
+      width: 40px;
+      height: 2px;
+    }
+  }
+
+  .submit {
+    .group {
+      // width: 270px;
+      line-height: 64px;
+      text-align: left;
+      .resaa-btn {
+        width: 190px;
+        height: 42px;
+      }
+      .cancel {
+        color: #35d6c1;
+        padding-left: 64px;
+      }
+    }
+  }
+}
+</style>
+
+<template>
+  <div class="form-call d-flex flex-column">
+    <div class="main-title">درخواست رزرو تماس</div>
+    <p class="desc mt-4">
+      در حال حاضر، خانم دکتر ملکی در دسترس نیست. شما می‌توانید از ایشان بخواهید
+      که با شما تماس بگیرند. این تماس تا ۲۴ ساعت آینده اتفاق می‌افتد.
+    </p>
+    <p class="desc font-weight-bold mt-4">
+      برای تاثیر بیشتر تماس، می‌توانید یک پیام هم از شرح تماس‌تان به پزشک
+      بفرستید.
+    </p>
+    <v-textarea
+      v-model="message"
+      placeholder="متن پیام را بنویسید..."
+      name="desc"
+      rows="10"
+      no-resize
+      v-validate="'required'"
+      :error-messages="errors.collect('desc')"
+      data-vv-as="متن پیام"
+      outlined
+    />
+
+    <div class="submit d-flex justify-end">
+      <div class="group">
+        <v-btn text class="cancel">انصراف</v-btn>
+        <v-btn @click="onSubmit" class="resaa-btn" large
+          >ارسال درخواست رزرو تماس</v-btn
+        >
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { Component, Vue } from 'nuxt-property-decorator'
+
+@Component
+export default class FormCall extends Vue {
+  message = ''
+
+  onSubmit() {
+    this.$validator.validate().then((valid) => {
+      if (valid) {
+        this.$emit('submit')
+      }
+    })
+  }
+}
+</script>

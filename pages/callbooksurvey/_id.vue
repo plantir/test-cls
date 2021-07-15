@@ -30,7 +30,7 @@
         <div class="form-group">
           <label>خصوصیات:</label>
           <v-select
-            :items="items"
+            :items="fields"
             item-text="title"
             item-value="id"
             v-model="form.fields"
@@ -75,15 +75,15 @@
   </section>
 </template>
 <script lang="ts">
-import { Vue, Component, Prop, Watch, Emit, Ref } from 'vue-property-decorator'
+import { Vue, Component, Prop, Watch, Emit, Ref } from 'nuxt-property-decorator'
 
 @Component
 export default class CallBookSurveyPage extends Vue {
-  items = []
+  fields = []
   form: any = {}
   async mounted() {
     let { result } = await this.$service.callbookSurveys.fields()
-    this.items = result
+    this.fields = result
   }
 
   async submit() {

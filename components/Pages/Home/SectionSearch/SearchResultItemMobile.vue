@@ -17,8 +17,8 @@
   }
   .view-all {
     margin: 56px 0 98px;
-    border: 1px solid var(--v-primary-base);
-    color: var(--v-primary-base);
+    border: 1px solid $primary-color;
+    color: $primary-color;
     line-height: 48px;
     border-radius: 8px;
     display: block;
@@ -79,7 +79,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator'
+import { Component, Vue, Prop } from 'nuxt-property-decorator'
 import Doctor from './Doctor.vue'
 
 @Component({

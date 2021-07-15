@@ -20,7 +20,7 @@
   }
   .blog-link {
     box-shadow: 0 15px 40px 0 rgba(19, 209, 243, 0.15) !important;
-    border: 1px solid var(--v-primary-base);
+    border: 1px solid $primary-color;
     font-size: 16px;
     border-radius: 8px;
     font-weight: bold;
@@ -56,7 +56,7 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue, Prop } from 'vue-property-decorator'
+import { Component, Vue, Prop } from 'nuxt-property-decorator'
 
 @Component({
   components: {
